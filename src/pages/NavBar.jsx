@@ -11,7 +11,7 @@ import {
   HiBriefcase,
   HiEnvelope,
 } from "react-icons/hi2";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -35,7 +35,8 @@ const container = {
     transition: {
       duration: 0.2,
       delayChildren: 0.5,
-      ease: "easeIn",
+      ease: "easeOut",
+      type: "keyframes",
     },
     x: 0,
   },
@@ -153,116 +154,136 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
         )}
 
         {/* MOBILE MENU */}
-        {!isAboveSmallScreens && isMenuToggled && (
-          <>
-            <motion.div
-              variants={container}
-              initial="hidden"
-              animate="show"
-              className="fixed top-0 left-0 right-0 -z-10 min-h-screen bg-gray-900/90"
-            ></motion.div>
-            <motion.div
-              variants={container}
-              initial="hidden"
-              animate="show"
-              className={`fixed right-0 bottom-0 h-full w-[300px] opacity-0 transition-all  duration-300 ${
-                isMenuToggled && "opacity-100"
-              } dark:bg-[#212529] `}
-            >
-              <div className="flex justify-end py-2 px-7">
-                <button
-                  className="rounded-full p-3 dark:bg-darkSecondary"
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                >
-                  <HiOutlineXMark />
-                </button>
-              </div>
+        <AnimatePresence>
+          {!isAboveSmallScreens && isMenuToggled && (
+            <>
+              <motion.div
+                variants={container}
+                initial="hidden"
+                animate="show"
+                className="fixed top-0 left-0 right-0 -z-10 min-h-screen bg-gray-900/90"
+                exit={{
+                  x: 500,
+                  transition: {
+                    delay: 0.35,
+                    duration: 0.3,
+                    type: "spring",
+                    ease: "easeOut",
+                  },
+                }}
+              ></motion.div>
+              <motion.div
+                variants={container}
+                initial="hidden"
+                animate="show"
+                exit={{
+                  x: 500,
+                  transition: {
+                    delay: 0,
+                    duration: 0.2,
+                    type: "spring",
+                    ease: "easeOut",
+                  },
+                }}
+                className={`fixed right-0 bottom-0 h-full w-[300px] opacity-0 transition-all  duration-300 ${
+                  isMenuToggled && "opacity-100"
+                } dark:bg-[#212529] `}
+              >
+                <div className="flex justify-end py-2 px-7">
+                  <button
+                    className="rounded-full p-3 dark:bg-darkSecondary"
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  >
+                    <HiOutlineXMark />
+                  </button>
+                </div>
+                <div className="grid h-96 place-content-center gap-10">
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    custom={{ delay: 0.3 }}
+                    variants={variants}
+                    className={`flex items-center gap-2 transition duration-500 ${
+                      selectedPage == "inicio" && "text-darkSecondary"
+                    }`}
+                  >
+                    <HiHome />
+                    <Link
+                      page="Inicio"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                  </motion.div>
 
-              <div className="grid h-96 place-content-center gap-10">
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  custom={{ delay: 0.3 }}
-                  variants={variants}
-                  className={`flex items-center gap-2 transition duration-500 ${
-                    selectedPage == "inicio" && "text-darkSecondary"
-                  }`}
-                >
-                  <HiHome />
-                  <Link
-                    page="Inicio"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                </motion.div>
-                <motion.div
-                  initial="hidden"
-                  custom={{ delay: 0.5 }}
-                  animate="visible"
-                  variants={variants}
-                  className={`flex items-center gap-2 transition duration-500 ${
-                    selectedPage == "inicio" && "text-darkSecondary"
-                  }`}
-                >
-                  <HiIdentification />
-                  <Link
-                    page="Sobre mi"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                </motion.div>
-                <motion.div
-                  initial="hidden"
-                  custom={{ delay: 0.7 }}
-                  animate="visible"
-                  variants={variants}
-                  className={`flex items-center gap-2 transition duration-500 ${
-                    selectedPage == "inicio" && "text-darkSecondary"
-                  }`}
-                >
-                  <HiCodeBracketSquare />
-                  <Link
-                    page="Habilidades"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                </motion.div>
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  custom={{ delay: 0.9 }}
-                  variants={variants}
-                  className={`flex items-center gap-2 transition duration-500 ${
-                    selectedPage == "inicio" && "text-darkSecondary"
-                  }`}
-                >
-                  <HiBriefcase />
-                  <Link
-                    page="Proyectos"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                </motion.div>
-                <motion.div
-                  initial="hidden"
-                  custom={{ delay: 1.1 }}
-                  animate="visible"
-                  variants={variants}
-                  className={`flex items-center gap-2 transition duration-500 ${
-                    selectedPage == "inicio" && "text-darkSecondary"
-                  }`}
-                >
-                  <HiEnvelope />
-                  <Link
-                    page="Contacto"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                </motion.div>
-              </div>
-            </motion.div>
-          </>
-        )}
+                  <motion.div
+                    initial="hidden"
+                    custom={{ delay: 0.5 }}
+                    animate="visible"
+                    variants={variants}
+                    className={`flex items-center gap-2 transition duration-500 ${
+                      selectedPage == "inicio" && "text-darkSecondary"
+                    }`}
+                  >
+                    <HiIdentification />
+                    <Link
+                      page="Sobre mi"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial="hidden"
+                    custom={{ delay: 0.7 }}
+                    animate="visible"
+                    variants={variants}
+                    className={`flex items-center gap-2 transition duration-500 ${
+                      selectedPage == "inicio" && "text-darkSecondary"
+                    }`}
+                  >
+                    <HiCodeBracketSquare />
+                    <Link
+                      page="Habilidades"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    custom={{ delay: 0.9 }}
+                    variants={variants}
+                    className={`flex items-center gap-2 transition duration-500 ${
+                      selectedPage == "inicio" && "text-darkSecondary"
+                    }`}
+                  >
+                    <HiBriefcase />
+                    <Link
+                      page="Proyectos"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial="hidden"
+                    custom={{ delay: 1.1 }}
+                    animate="visible"
+                    variants={variants}
+                    className={`flex items-center gap-2 transition duration-500 ${
+                      selectedPage == "inicio" && "text-darkSecondary"
+                    }`}
+                  >
+                    <HiEnvelope />
+                    <Link
+                      page="Contacto"
+                      selectedPage={selectedPage}
+                      setSelectedPage={setSelectedPage}
+                    />
+                  </motion.div>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
