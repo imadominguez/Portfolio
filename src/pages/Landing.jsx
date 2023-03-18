@@ -20,7 +20,7 @@ function Landing({ setSelectedPage }) {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center gap-4 py-10 md:h-full  md:flex-row md:gap-16  "
+      className="flex h-[99vh] flex-col items-center justify-center gap-4 py-10   md:flex-row md:gap-16  "
     >
       {/* image section */}
       <div className="z-10  mt-16 flex flex-col items-center justify-center md:order-2 md:mt-0 md:flex-row-reverse">
@@ -122,7 +122,7 @@ function Landing({ setSelectedPage }) {
           }}
         >
           <AnchorLink
-            className="flex items-center gap-2 rounded-l-md bg-gradient-to-r py-3 px-7 font-roboto font-semibold transition duration-500  active:shadow-inner  active:shadow-black active:transition-none  dark:bg-darkSecondary dark:from-darkSecondary dark:via-[#736440] dark:to-darkSecondary dark:text-white dark:hover:via-darkSecondary"
+            className="flex items-center gap-2 rounded-l-md bg-gradient-to-r py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner  active:shadow-black  active:transition-none dark:bg-darkSecondary  dark:from-darkSecondary dark:via-darkViteGradient dark:to-darkSecondary dark:text-white dark:hover:via-darkSecondary dark:hover:text-gray-700"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
