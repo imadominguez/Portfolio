@@ -169,7 +169,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 isMenuToggled && "opacity-100"
               } dark:bg-[#212529] `}
             >
-              <div className="flex justify-end py-6 px-9">
+              <div className="flex justify-end py-2 px-7">
                 <button
                   className="rounded-full p-3 dark:bg-darkSecondary"
                   onClick={() => setIsMenuToggled(!isMenuToggled)}
