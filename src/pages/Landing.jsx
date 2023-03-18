@@ -122,7 +122,7 @@ function Landing({ setSelectedPage }) {
           }}
         >
           <AnchorLink
-            className="flex items-center gap-2 rounded-sm rounded-l-md border py-3 px-7 font-semibold transition duration-500 dark:border-darkSecondary dark:text-darkSecondary hover:dark:text-white"
+            className="flex items-center gap-2 rounded-l-md bg-gradient-to-r py-3 px-7 font-roboto font-semibold transition duration-500  active:shadow-inner  active:shadow-black active:transition-none  dark:bg-darkSecondary dark:from-darkSecondary dark:via-[#736440] dark:to-darkSecondary dark:text-white dark:hover:via-darkSecondary"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
@@ -131,7 +131,7 @@ function Landing({ setSelectedPage }) {
           </AnchorLink>
           <button onClick={descargarPDF}>
             <AnchorLink
-              className="flex items-center gap-2 rounded-sm rounded-r-md border-r border-t border-b py-3 px-7 font-semibold transition duration-500 dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary hover:dark:text-white"
+              className="flex items-center gap-2 rounded-r-md border-r border-t border-b py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner active:shadow-darkSecondary active:transition-none dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary dark:hover:dark:text-white"
               onClick={() => setSelectedPage("contact")}
               href="#contact"
               download="../assets/imanoldominguezsanchez.pdf"
