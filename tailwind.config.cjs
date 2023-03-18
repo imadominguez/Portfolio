@@ -7,6 +7,7 @@ module.exports = {
         darkPrimary: "#000000",
         darkSecondary: "#b29962",
         darkTertiary: "#9b9b9b",
+        darkViteGradient: "#736440",
       },
       fontFamily: {
         robotoMono: ["Roboto Mono", "monospace"],
