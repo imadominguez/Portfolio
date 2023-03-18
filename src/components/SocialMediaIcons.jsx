@@ -6,23 +6,23 @@ function SocialMediaIcons() {
     <div className="flex justify-center gap-7 md:justify-start">
       <a
         href="https://www.linkedin.com/"
-        className=" transition duration-500 hover:opacity-70"
+        className=" transition duration-500 ease-out  hover:opacity-50"
         target="_blank"
         rel="noreferrer"
       >
         {/* tomar de localstorage dakrk */}
 
-        <Linkedin fill="#ffffff" width="36px" height="36px" />
+        <Linkedin fill="#ffffff" width="45px" height="45px" />
       </a>
       <a
         href="https://www.linkedin.com/"
-        className=" transition duration-500 hover:opacity-50"
+        className=" transition duration-500 ease-out  hover:opacity-50"
         target="_blank"
         rel="noreferrer"
       >
         {/* tomar de localstorage dakrk */}
 
-        <Github fill="#ffffff" width="36px" height="36px" />
+        <Github fill="#ffffff" width="45px" height="45px" />
       </a>
     </div>
   );
