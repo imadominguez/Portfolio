@@ -72,7 +72,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
     : "dark:hover:text-yellow-400 dark:text-black";
   return (
     <nav
-      className={` ${navbarBackground} fixed top-0 z-40 w-full py-6 transition duration-500 ease-in`}
+      className={` ${navbarBackground} fixed top-0 z-40 w-full py-4 transition duration-500 ease-in md:py-6`}
     >
       <div className="mx-auto flex w-5/6 items-center justify-between">
         <motion.h4
