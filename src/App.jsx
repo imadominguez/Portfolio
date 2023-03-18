@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 // ------------- Components --------------- //
-import NavBar from "./components/NavBar";
-import DotGroup from "./components/DotGroup";
-import Landing from "./components/Landing";
+import NavBar from "./pages/NavBar";
+import DotGroup from "./pages/DotGroup";
+import Landing from "./pages/Landing";
 // -------------- Hooks ---------------- //
 import useMediaQuery from "./hooks/useMediaQuery";
 import "./App.css";
@@ -23,7 +23,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="h-screen bg-gray-100 dark:bg-zinc-800">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 dark:bg-zinc-800">
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
