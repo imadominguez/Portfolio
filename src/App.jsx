@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import NavBar from "./pages/NavBar";
 import DotGroup from "./pages/DotGroup";
 import Landing from "./pages/Landing";
+import AboutMe from "./pages/AboutMe";
 // -------------- Hooks ---------------- //
 import useMediaQuery from "./hooks/useMediaQuery";
 import "./App.css";
+import LineGradient from "./components/LineGradient";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -38,6 +40,10 @@ function App() {
         )}
       </div>
       <Landing />
+      <LineGradient />
+      <div className="mx-auto w-5/6 md:w-full">
+        <AboutMe />
+      </div>
     </div>
   );
 }
