@@ -12,6 +12,7 @@ import {
   HiEnvelope,
 } from "react-icons/hi2";
 import { AnimatePresence, motion } from "framer-motion";
+import style from "./style";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -73,7 +74,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
     : "dark:hover:text-yellow-400 dark:text-black";
   return (
     <nav
-      className={` ${navbarBackground} fixed top-0 z-40 w-full py-2 transition duration-500 ease-in md:py-6`}
+      className={` ${navbarBackground} fixed top-0 z-40 w-full py-2 transition duration-300 ease-in md:py-4`}
     >
       <div className="mx-auto flex w-5/6 items-center justify-between">
         <motion.h4
@@ -93,9 +94,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             animate="visible"
             className="flex justify-between gap-16 font-robotoMono text-sm font-semibold"
           >
-            <div
-              className={`flex ${navbarText} items-center gap-2 transition duration-500 hover:scale-125 `}
-            >
+            <div className={`${style.navItems} ${navbarText} `}>
               <HiHome />
               <Link
                 page="Inicio"
@@ -103,9 +102,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-            <div
-              className={`flex ${navbarText} items-center gap-2 transition duration-500 hover:scale-125 dark:hover:text-darkSecondary`}
-            >
+            <div className={`${style.navItems} ${navbarText} `}>
               <HiIdentification />
               <Link
                 page="Conoceme"
@@ -113,9 +110,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-            <div
-              className={`flex ${navbarText} items-center gap-2 transition duration-500 hover:scale-125 dark:hover:text-darkSecondary`}
-            >
+            <div className={`${style.navItems} ${navbarText} `}>
               <HiCodeBracketSquare />
               <Link
                 page="Habilidades"
@@ -123,9 +118,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-            <div
-              className={`flex ${navbarText} items-center gap-2 transition duration-500 hover:scale-125 dark:hover:text-darkSecondary`}
-            >
+            <div className={`${style.navItems} ${navbarText} `}>
               <HiBriefcase />
               <Link
                 page="Proyectos"
@@ -133,9 +126,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-            <div
-              className={`flex ${navbarText} items-center gap-2 transition duration-500 hover:scale-125 dark:hover:text-darkSecondary`}
-            >
+            <div className={`${style.navItems} ${navbarText} `}>
               <HiEnvelope />
               <Link
                 page="Contacto"
@@ -146,7 +137,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
           </motion.div>
         ) : (
           <button
-            className="rounded-full p-3 dark:bg-slate-700"
+            className="rounded-full p-3 dark:bg-gray-700/80"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             {isMenuToggled ? <HiBars3BottomRight /> : <HiBars3 />}
