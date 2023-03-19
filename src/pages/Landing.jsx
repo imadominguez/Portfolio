@@ -20,7 +20,7 @@ function Landing({ setSelectedPage }) {
   return (
     <section
       id="home"
-      className="flex h-[99vh] flex-col items-center justify-center gap-4 py-10   md:flex-row md:gap-16  "
+      className="flex flex-col items-center justify-center gap-4 py-10 md:h-[99vh]   md:flex-row md:gap-16  "
     >
       {/* image section */}
       <div className="z-10  mt-16 flex flex-col items-center justify-center md:order-2 md:mt-0 md:flex-row-reverse">
