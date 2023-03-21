@@ -16,31 +16,31 @@ function DotGroup({ selectedPage, setSelectedPage }) {
       />
       <AnchorLink
         className={`${
-          selectedPage === "Conoceme" ? selectedStyles : "dark:bg-white"
+          selectedPage === "aboutme" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#Conoceme`}
-        onClick={() => setSelectedPage("Conoceme")}
+        href={`#aboutme`}
+        onClick={() => setSelectedPage("aboutme")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "Habilidades" ? selectedStyles : "dark:bg-white"
+          selectedPage === "skills" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#Habilidades`}
-        onClick={() => setSelectedPage("Habilidades")}
+        href={`#skilss`}
+        onClick={() => setSelectedPage("skills")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "Proyectos" ? selectedStyles : "dark:bg-white"
+          selectedPage === "projects" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#Proyectos`}
-        onClick={() => setSelectedPage("Proyectos")}
+        href={`#projects`}
+        onClick={() => setSelectedPage("projects")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "Contacto" ? selectedStyles : "dark:bg-white"
+          selectedPage === "contact" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#Contacto`}
-        onClick={() => setSelectedPage("Contacto")}
+        href={`#contact`}
+        onClick={() => setSelectedPage("contact")}
       />
     </div>
   );
