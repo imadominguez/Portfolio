@@ -11,7 +11,7 @@ function AboutMe() {
   const variantH2 = {
     hidden: { x: -50 },
     visible: {
-      x: 10,
+      x: 0,
       transition: { duration: 1.2, type: "spring" },
     },
   };
@@ -26,13 +26,13 @@ function AboutMe() {
   return (
     <section
       id="aboutme"
-      className=" mx-auto flex min-h-screen w-4/5 max-w-3xl flex-col items-center justify-center py-24 md:pt-48"
+      className=" mx-auto flex min-h-screen w-4/5 max-w-3xl flex-col items-start justify-center py-24 md:pt-48"
     >
       <motion.h2
         variants={variantH2}
         initial="hidden"
         whileInView="visible"
-        className="font-robotoMono uppercase tracking-[1px]  "
+        className="font-robotoMono text-2xl font-bold uppercase tracking-[1px]  "
       >
         sobre mi
       </motion.h2>
@@ -51,11 +51,23 @@ function AboutMe() {
             whileInView="visible"
             className="pt-2 leading-6"
           >
-            Mi nombre es Imanol, soy de Buenos Aires, Argentina. Soy programador
-            Full Stack y tutor e-learning con un año de experiencia en la
-            industria de la educación. Me apasiona crear soluciones atractivas e
-            innovadoras en el desarrollo de aplicaciones web, utilizando mis
-            habilidades en HTML, CSS, JavaScript y React.
+            Soy de Buenos Aires, Argentina.
+            <span className="font-bold dark:text-darkSecondary">
+              {" "}
+              Programador Full Stack{" "}
+            </span>
+            y tutor e-learning con un año de experiencia en la industria de la
+            educación. Me apasiona crear soluciones atractivas e innovadoras en
+            el desarrollo de
+            <span className="font-bold dark:text-darkSecondary">
+              {" "}
+              aplicaciones web
+            </span>
+            , utilizando mis habilidades en
+            <span className="font-bold text-orange-600"> HTML</span>,
+            <span className="font-bold text-blue-600"> CSS</span>,
+            <span className="font-bold text-yellow-600"> JavaScript </span>y
+            <span className="font-bold text-[#61DAFB]"> React</span>.
           </motion.span>
           <motion.span
             variants={variantSpanTwo}
@@ -71,12 +83,12 @@ function AboutMe() {
             variants={variantSpanOne}
             initial="hidden"
             whileInView="visible"
-            className="mt-10 flex flex-col pt-2 text-center text-xl uppercase leading-6 text-darkSecondary"
+            className="mx-auto mt-10 flex  flex-col pt-2 text-center text-xl uppercase leading-6 text-darkSecondary/80 md:w-4/5"
           >
             Si te interesa un programador con ganas de progresar y afrontar
             nuevos desafíos
           </motion.span>
-          <span className="mt-4 text-center text-lg font-bold uppercase tracking-[1px] text-darkSecondary">
+          <span className="mt-6 animate-bounce text-center text-lg font-bold uppercase tracking-[2px] text-darkSecondary ">
             ¡Contacta conmigo!
           </span>
         </p>

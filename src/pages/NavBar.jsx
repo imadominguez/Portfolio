@@ -69,13 +69,15 @@ const variantNav = {
 function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 920px)");
-  const navbarBackground = isTopOfPage ? " " : "dark:bg-zinc-600 ";
+  const navbarBackground = isTopOfPage
+    ? " "
+    : "dark:from-zinc-700 dark:to-zinc-800  ";
   const navbarText = isTopOfPage
     ? "dark:hover:text-darkSecondary"
     : "dark:hover:text-darkSecondary";
   return (
     <nav
-      className={` ${navbarBackground} fixed top-0 z-40 w-full py-2 transition duration-300 ease-in md:py-4`}
+      className={` ${navbarBackground} fixed top-0 z-40  w-full bg-gradient-to-b py-2 transition duration-300 ease-in md:py-4`}
     >
       <div className="mx-auto flex w-5/6 items-center justify-between">
         <motion.h4
