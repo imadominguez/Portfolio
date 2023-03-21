@@ -25,7 +25,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 dark:bg-zinc-800">
+    <div className=" flex min-h-screen flex-col items-center justify-center bg-[#E6E6E6] text-black dark:bg-zinc-800 dark:text-slate-200">
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
