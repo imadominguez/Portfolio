@@ -1,5 +1,6 @@
 const style = {
-  navItems: "flex items-center gap-2 transition duration-500 hover:scale-125",
+  navItems:
+    "flex items-center gap-2 transition duration-500 hover:scale-110 uppercase tracking-[2px]",
 };
 
 export default style;

@@ -13,6 +13,7 @@ import {
 } from "react-icons/hi2";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./style";
+import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -68,10 +69,10 @@ const variantNav = {
 function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 920px)");
-  const navbarBackground = isTopOfPage ? " " : "dark:bg-darkTertiary ";
+  const navbarBackground = isTopOfPage ? " " : "dark:bg-zinc-600 ";
   const navbarText = isTopOfPage
     ? "dark:hover:text-darkSecondary"
-    : "dark:hover:text-yellow-400 dark:text-black";
+    : "dark:hover:text-darkSecondary";
   return (
     <nav
       className={` ${navbarBackground} fixed top-0 z-40 w-full py-2 transition duration-300 ease-in md:py-4`}
@@ -97,7 +98,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             <div className={`${style.navItems} ${navbarText} `}>
               <HiHome />
               <Link
-                page="Inicio"
+                page="home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
@@ -105,7 +106,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             <div className={`${style.navItems} ${navbarText} `}>
               <HiIdentification />
               <Link
-                page="Conoceme"
+                page="aboutme"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
@@ -113,7 +114,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             <div className={`${style.navItems} ${navbarText} `}>
               <HiCodeBracketSquare />
               <Link
-                page="Habilidades"
+                page="skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
@@ -121,7 +122,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             <div className={`${style.navItems} ${navbarText} `}>
               <HiBriefcase />
               <Link
-                page="Proyectos"
+                page="projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
@@ -129,10 +130,13 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             <div className={`${style.navItems} ${navbarText} `}>
               <HiEnvelope />
               <Link
-                page="Contacto"
+                page="contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
+            </div>
+            <div>
+              <ButtonDarkMode />
             </div>
           </motion.div>
         ) : (
