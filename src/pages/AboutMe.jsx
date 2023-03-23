@@ -36,7 +36,7 @@ function AboutMe() {
       >
         sobre mi
       </motion.h2>
-      <div className="mt-2 h-0.5 w-36 dark:bg-white "></div>
+      <div className="mt-2 h-0.5 w-36 dark:bg-darkSecondary "></div>
       <motion.div
         initial="hidden"
         whileInView="visible"
