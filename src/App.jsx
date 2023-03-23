@@ -9,6 +9,7 @@ import AboutMe from "./pages/AboutMe";
 import useMediaQuery from "./hooks/useMediaQuery";
 import "./App.css";
 import LineGradient from "./components/LineGradient";
+import MySkills from "./pages/MySkills";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -43,6 +44,9 @@ function App() {
       <LineGradient />
       <div className="mx-auto w-5/6 md:w-full">
         <AboutMe />
+      </div>
+      <div className="mx-auto w-5/6 md:w-full">
+        <MySkills />
       </div>
     </div>
   );
