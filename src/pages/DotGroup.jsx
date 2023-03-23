@@ -25,7 +25,7 @@ function DotGroup({ selectedPage, setSelectedPage }) {
         className={`${
           selectedPage === "skills" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#skilss`}
+        href={`#skills`}
         onClick={() => setSelectedPage("skills")}
       />
       <AnchorLink

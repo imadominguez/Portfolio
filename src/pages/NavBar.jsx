@@ -15,17 +15,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import style from "./style";
 import ButtonDarkMode from "../components/ButtonDarkMode";
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
-  const lowerCasePage = page.toLowerCase();
-
+const Link = ({ page, selectedPage, setSelectedPage, component }) => {
+  const lowerCasePage = page.toLowerCase().split(" ").join("");
   return (
     <AnchorLink
       className={`${
         selectedPage === lowerCasePage && "dark:text-darkSecondary"
-      } `}
+      } flex items-center gap-3`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
+      {component}
       {page}
     </AnchorLink>
   );
@@ -68,7 +68,7 @@ const variantNav = {
 };
 function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isAboveSmallScreens = useMediaQuery("(min-width: 920px)");
+  const isAboveSmallScreens = useMediaQuery("(min-width: 1100px)");
   const navbarBackground = isTopOfPage
     ? " "
     : "dark:from-zinc-700 dark:to-zinc-800  ";
@@ -98,46 +98,46 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             className="flex justify-between gap-16 font-robotoMono text-sm font-semibold"
           >
             <div className={`${style.navItems} ${navbarText} `}>
-              <HiHome />
               <Link
-                page="home"
+                page="inicio"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                component={<HiHome />}
               />
             </div>
             <div className={`${style.navItems} ${navbarText} `}>
-              <HiIdentification />
               <Link
-                page="aboutme"
+                page="Sobre mi"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                component={<HiIdentification />}
               />
             </div>
             <div className={`${style.navItems} ${navbarText} `}>
-              <HiCodeBracketSquare />
               <Link
-                page="skills"
+                page="Habilidades"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                component={<HiCodeBracketSquare />}
               />
             </div>
             <div className={`${style.navItems} ${navbarText} `}>
-              <HiBriefcase />
               <Link
-                page="projects"
+                page="Proyectos"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                component={<HiBriefcase />}
               />
             </div>
             <div className={`${style.navItems} ${navbarText} `}>
-              <HiEnvelope />
               <Link
-                page="contact"
+                page="Contacto"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                component={<HiEnvelope />}
               />
             </div>
-            <div>
+            <div className={`${style.navItems} ${navbarText} `}>
               <ButtonDarkMode />
             </div>
           </motion.div>
@@ -206,7 +206,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                   >
                     <HiHome />
                     <Link
-                      page="Inicio"
+                      page="inicio"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
@@ -218,12 +218,12 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                     animate="visible"
                     variants={variants}
                     className={`flex items-center gap-2 transition duration-500 ${
-                      selectedPage == "inicio" && "text-darkSecondary"
+                      selectedPage == "¿Quiénsoy?" && "text-darkSecondary"
                     }`}
                   >
                     <HiIdentification />
                     <Link
-                      page="Sobre mi"
+                      page="¿Quién soy?"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
@@ -234,7 +234,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                     animate="visible"
                     variants={variants}
                     className={`flex items-center gap-2 transition duration-500 ${
-                      selectedPage == "inicio" && "text-darkSecondary"
+                      selectedPage == "skills" && "text-darkSecondary"
                     }`}
                   >
                     <HiCodeBracketSquare />
@@ -250,12 +250,12 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                     custom={{ delay: 0.9 }}
                     variants={variants}
                     className={`flex items-center gap-2 transition duration-500 ${
-                      selectedPage == "inicio" && "text-darkSecondary"
+                      selectedPage == "projects" && "text-darkSecondary"
                     }`}
                   >
                     <HiBriefcase />
                     <Link
-                      page="Proyectos"
+                      page="projects"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
@@ -266,7 +266,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                     animate="visible"
                     variants={variants}
                     className={`flex items-center gap-2 transition duration-500 ${
-                      selectedPage == "inicio" && "text-darkSecondary"
+                      selectedPage == "contact" && "text-darkSecondary"
                     }`}
                   >
                     <HiEnvelope />

@@ -9,14 +9,16 @@ import cvPDF from "../assets/imanoldominguezsanchez.pdf";
 
 function Landing({ setSelectedPage }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 920px)");
-  function descargarPDF() {
-    const blob = new Blob([cvPDF], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "cv-imanol-dominguez.pdf";
-    link.click();
-  }
+  const descargarPdf = () => {
+    const downloadInstance = document.createElement("a");
+    downloadInstance.href =
+      "https://imanoldominguezdev.netlify,app/assets/imanoldominguezsanchez.pdf";
+    downloadInstance.target = "_blank";
+    downloadInstance.download = "imanoldominguezsanchez.pdf";
+    document.body.appendChild(downloadInstance);
+    downloadInstance.click();
+    document.body.removeChild(downloadInstance);
+  };
   return (
     <section
       id="home"
@@ -129,7 +131,7 @@ function Landing({ setSelectedPage }) {
             <HiEnvelope />
             Contactame
           </AnchorLink>
-          <button onClick={descargarPDF}>
+          <button onClick={descargarPdf}>
             <AnchorLink
               className="flex items-center gap-2 rounded-r-md border-r border-t border-b py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner active:shadow-darkSecondary active:transition-none dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary dark:hover:dark:text-white"
               onClick={() => setSelectedPage("contact")}
