@@ -22,11 +22,20 @@ function App() {
       if (window.scrollY === 0) setisTopOfPage(true);
       if (window.scrollY !== 0) setisTopOfPage(false);
     };
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className=" flex min-h-screen flex-col items-center justify-center bg-[#E6E6E6] text-black dark:bg-zinc-800 dark:text-slate-200">
+    <div className=" flex min-h-screen flex-col items-center justify-center bg-[#E6E6E6]  text-black dark:bg-zinc-800 dark:text-slate-200">
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -44,9 +53,11 @@ function App() {
       <LineGradient />
       <div className="mx-auto w-5/6 md:w-full">
         <AboutMe />
+        <LineGradient />
       </div>
       <div className="mx-auto w-5/6 md:w-full">
         <MySkills />
+        <LineGradient />
       </div>
     </div>
   );
