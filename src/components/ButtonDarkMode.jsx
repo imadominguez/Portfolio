@@ -14,11 +14,12 @@ const ButtonDarkMode = () => {
     }
   };
   return (
-    <button
-      onClick={handleThemeMode}
-      className="rounded-lg p-2 dark:border-[1px] dark:border-white  dark:shadow-md dark:shadow-white/50"
-    >
-      {themeMode == "light" ? <HiOutlineSun /> : <HiOutlineMoon />}
+    <button onClick={handleThemeMode} className="h-12 rounded-lg p-2">
+      {themeMode == "light" ? (
+        <HiOutlineSun className="h-5 w-5" />
+      ) : (
+        <HiOutlineMoon className="h-5 w-5" />
+      )}
     </button>
   );
 };
