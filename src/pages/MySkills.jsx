@@ -6,6 +6,10 @@ import React from "../assets/logos/React";
 import Redux from "../assets/logos/Redux";
 import Html from "../assets/logos/Html";
 import Css from "../assets/logos/Css";
+import Node from "../assets/logos/Node";
+import Express from "../assets/logos/Express";
+import PostgreSQL from "../assets/logos/PostgreSQL";
+import Sql from "../assets/logos/Sql";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 920px)");
@@ -19,7 +23,7 @@ const MySkills = () => {
   return (
     <section
       id="skills"
-      className="pt-1mix-blend-saturation mx-auto flex min-h-screen w-4/5 max-w-3xl flex-col items-center justify-center gap-10"
+      className="pt-1mix-blend-saturation mx-auto flex min-h-[98vh] w-4/5 max-w-3xl flex-col items-center justify-center gap-10"
     >
       <div className=" flex w-full flex-col items-start ">
         <motion.h2
@@ -32,72 +36,43 @@ const MySkills = () => {
         </motion.h2>
         <div className="mt-2 h-0.5 w-36 dark:bg-darkSecondary "></div>
       </div>
-      {/* LENGUAJES */}
-      <article className="w-full overflow-hidden rounded-2xl border shadow-lg dark:border-white dark:shadow-white ">
-        <div className="border-b-[1px] border-white py-2">
-          <h2 className="ml-5 font-roboto uppercase  tracking-widest">
-            Lenguajes
-          </h2>
+      <article className="grid grid-cols-3 gap-10 font-roboto font-medium tracking-widest">
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Html width={"54px"} height={"54px"} />
+          <span className="text-html">HTML</span>
         </div>
-        <div className="grid grid-cols-3 p-5">
-          <div className="flex w-full flex-col items-center justify-center">
-            <Javascript width={"50px"} height={"50px"} />
-            <span>Javascript</span>
-          </div>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Css width={"54px"} height={"54px"} />
+          <span className="text-css">CSS 3</span>
         </div>
-      </article>
-      {/* FRONTEND */}
-      <article className="w-full overflow-hidden rounded-2xl border shadow-lg dark:border-white dark:shadow-white">
-        <div className="border-b-[1px] border-white py-2">
-          <h2 className="ml-5 font-roboto uppercase  tracking-widest">
-            Frontend
-          </h2>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Javascript width={"54px"} height={"54px"} />
+          <span className="text-javascript">JavaScript</span>
         </div>
-        <div className="grid grid-cols-3 gap-y-5 p-5">
-          <div className="flex flex-col items-center justify-center">
-            <Html width={"50px"} height={"50px"} />
-            <span>HTML</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <Css width={"50px"} height={"50px"} />
-            <span>CSS</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <React width={"50px"} height={"50px"} />
-            <span>React</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <Redux width={"50px"} height={"50px"} />
-            <span>Redux</span>
-          </div>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <React width={"54px"} height={"54px"} />
+          <span className="text-react">React</span>
         </div>
-      </article>
-      {/* BACKEND */}
-      <article className="w-full overflow-hidden rounded-2xl border shadow-lg dark:border-white dark:shadow-white">
-        <div className="border-b-[1px] border-white py-2">
-          <h2 className="ml-5 font-roboto uppercase  tracking-widest">
-            Backend
-          </h2>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Redux width={"54px"} height={"54px"} />
+          <span className="text-redux">Redux</span>
         </div>
-        <div></div>
-      </article>
-      {/* DATA BASE */}
-      <article className="w-full overflow-hidden rounded-2xl border shadow-lg dark:border-white dark:shadow-white">
-        <div className="border-b-[1px] border-white py-2">
-          <h2 className="ml-5 font-roboto uppercase  tracking-widest">
-            Base de datos
-          </h2>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Node width={"54px"} height={"54px"} />
+          <span className="text-node">Node</span>
         </div>
-        <div></div>
-      </article>
-      {/* FRAMEWORKS */}
-      <article className="w-full overflow-hidden rounded-2xl border shadow-lg dark:border-white dark:shadow-white">
-        <div className="border-b-[1px] border-white py-2">
-          <h2 className="ml-5 font-roboto uppercase  tracking-widest">
-            Frameworks
-          </h2>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Express />
+          <span className="text-white">Express</span>
         </div>
-        <div></div>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <PostgreSQL width={"54px"} height={"54px"} />
+          <span className="text-postgre">PostgreSQL</span>
+        </div>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
+          <Sql width={"54px"} height={"54px"} />
+          <span className="text-sql">SQL</span>
+        </div>
       </article>
     </section>
   );
