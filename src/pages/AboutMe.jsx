@@ -26,7 +26,7 @@ function AboutMe() {
   return (
     <section
       id="aboutme"
-      className=" mx-auto flex min-h-screen w-4/5 max-w-3xl flex-col items-start justify-center py-24 md:pt-48"
+      className=" mx-auto flex min-h-[98vh] w-4/5 max-w-3xl flex-col items-start justify-center py-24 md:pt-48"
     >
       <motion.h2
         variants={variantH2}
@@ -51,9 +51,8 @@ function AboutMe() {
             whileInView="visible"
             className="pt-2 leading-6"
           >
-            Soy de Buenos Aires, Argentina.
+            Soy de Buenos Aires, Argentina.{" "}
             <span className="font-bold dark:text-darkSecondary">
-              {" "}
               Programador Full Stack{" "}
             </span>
             y tutor e-learning con un año de experiencia en la industria de la
@@ -64,33 +63,41 @@ function AboutMe() {
               aplicaciones web
             </span>
             , utilizando mis habilidades en
-            <span className="font-bold text-orange-600"> HTML</span>,
-            <span className="font-bold text-blue-600"> CSS</span>,
-            <span className="font-bold text-yellow-600"> JavaScript </span>y
-            <span className="font-bold text-[#61DAFB]"> React</span>.
+            <span className=" tracking-[1px] text-html"> HTML</span>,
+            <span className=" tracking-[1px] text-css"> CSS 3</span>,
+            <span className=" tracking-[1px] text-javascript"> JavaScript</span>
+            ,<span className=" tracking-[1px] text-react"> React</span>,
+            <span className=" tracking-[1px] text-redux"> redux</span>,
+            <span className=" tracking-[1px] text-white"> express </span>y
+            <span className=" tracking-[1px] text-postgre"> postgreSQL</span>
           </motion.span>
           <motion.span
             variants={variantSpanTwo}
             initial="hidden"
             whileInView="visible"
-            className="pt-2 leading-6"
+            className="pt-10 text-center leading-6"
           >
             ¡Me encanta trabajar en equipo y siempre estoy buscando aprender
-            nuevas habilidades y conocimientos para poder estar siempre
-            actualizado!💪
+            nuevas habilidades y conocimientos para poder estar continuamente
+            actualizado! 💪
           </motion.span>
           <motion.span
             variants={variantSpanOne}
             initial="hidden"
             whileInView="visible"
-            className="mx-auto mt-10 flex  flex-col pt-2 text-center text-xl uppercase leading-6 text-darkSecondary/80 md:w-4/5"
+            className="mx-auto mt-10 flex  items-center gap-2 pt-2 text-center font-roboto text-xl font-semibold uppercase leading-6 tracking-widest text-darkSecondary/80 md:w-4/5"
           >
+            <span>🧐</span>
             Si te interesa un programador con ganas de progresar y afrontar
             nuevos desafíos
+            <span>🧐</span>
           </motion.span>
-          <span className="mt-6 animate-bounce text-center text-lg font-bold uppercase tracking-[2px] text-darkSecondary ">
-            ¡Contacta conmigo!
-          </span>
+          <a
+            href="#contact"
+            className="mt-6 animate-bounce text-center text-lg font-bold uppercase tracking-widest text-darkSecondary "
+          >
+            <span className="">😀 ¡Contacta conmigo! 😀</span>
+          </a>
         </p>
       </motion.div>
     </section>

@@ -106,7 +106,7 @@ function Landing({ setSelectedPage }) {
             </span>
           </span>
 
-          <p className=" mx-auto w-4/5 p-3 pt-5 text-center font-robotoSerif md:w-full md:text-left ">
+          <p className=" mx-auto w-4/5 p-3 pt-5 text-center font-robotoSerif md:w-full  ">
             Soy programador Full Stack y tutor e-learning con un año de
             experiencia en la industria de la educación.
           </p>
