@@ -123,16 +123,15 @@ function Landing({ setSelectedPage }) {
             <HiEnvelope />
             Contactame
           </AnchorLink>
-          <button onClick={handleDownloadPdf}>
-            <AnchorLink
-              className="flex items-center gap-2 rounded-r-md border-r border-t border-b py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner active:shadow-darkSecondary active:transition-none dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary dark:hover:dark:text-white"
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <HiDocumentArrowDown /> Descarga CV
-            </AnchorLink>
-          </button>
+
+          <a
+            className="flex items-center gap-2 rounded-r-md border-r border-t border-b py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner active:shadow-darkSecondary active:transition-none dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary dark:hover:dark:text-white"
+            href="https://drive.google.com/file/d/1vlr9weZneQZlGJ8zbSPGhfOTYf8IxgrJ/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <HiDocumentArrowDown /> Descarga CV
+          </a>
         </motion.div>
         <motion.div
           className="mt-5 flex h-[50px] justify-center md:justify-start"
