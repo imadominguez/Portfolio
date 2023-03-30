@@ -13,7 +13,6 @@ import {
 } from "react-icons/hi2";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./style";
-import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const Link = ({ page, selectedPage, setSelectedPage, component }) => {
   const lowerCasePage = page.toLowerCase().split(" ").join("");
@@ -77,7 +76,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
     : "dark:hover:text-darkSecondary";
   return (
     <nav
-      className={` ${navbarBackground} : fixed top-0 z-40 w-full bg-[#E6E6E6] bg-gradient-to-b py-2 shadow-sm  shadow-black transition duration-300 ease-in dark:from-zinc-700 dark:to-zinc-800 md:py-4`}
+      className={` ${navbarBackground} : fixed top-0 z-40 w-full bg-[#E6E6E6] bg-gradient-to-b py-2  transition duration-300 ease-in dark:from-zinc-700 dark:to-zinc-800 md:py-4`}
     >
       <div className="mx-auto flex w-5/6 items-center justify-between">
         <motion.h4
@@ -136,9 +135,6 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 setSelectedPage={setSelectedPage}
                 component={<HiEnvelope />}
               />
-            </div>
-            <div className={`${style.navItems} ${navbarText} `}>
-              <ButtonDarkMode />
             </div>
           </motion.div>
         ) : (

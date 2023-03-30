@@ -36,7 +36,7 @@ const MySkills = () => {
         </motion.h2>
         <div className="mt-2 h-0.5 w-36 dark:bg-darkSecondary "></div>
       </div>
-      <article className="grid grid-cols-3 gap-10 font-roboto font-medium tracking-widest">
+      <article className="grid  grid-cols-2 gap-10 font-roboto font-medium tracking-widest md:grid-cols-3">
         <div className="flex flex-col items-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50">
           <Html width={"54px"} height={"54px"} />
           <span className="text-html">HTML</span>

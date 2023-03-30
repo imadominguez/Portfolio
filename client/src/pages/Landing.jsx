@@ -5,19 +5,11 @@ import AnchorLink from "react-anchor-link-smooth-scroll-v2";
 import { TypeAnimation } from "react-type-animation";
 import { HiDocumentArrowDown, HiEnvelope } from "react-icons/hi2";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import cvPDF from "../assets/imanoldominguezsanchez.pdf";
 
 function Landing({ setSelectedPage }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 920px)");
-  const descargarPdf = () => {
-    const downloadInstance = document.createElement("a");
-    downloadInstance.href =
-      "https://imanoldominguezdev.netlify,app/assets/imanoldominguezsanchez.pdf";
-    downloadInstance.target = "_blank";
-    downloadInstance.download = "imanoldominguezsanchez.pdf";
-    document.body.appendChild(downloadInstance);
-    downloadInstance.click();
-    document.body.removeChild(downloadInstance);
+  const handleDownloadPdf = () => {
+    window.open("http://localhost:3000/imanoldominguezsanchez.pdf", "_blank");
   };
   return (
     <section
@@ -60,7 +52,7 @@ function Landing({ setSelectedPage }) {
             }}
             src={profile}
             alt="profile"
-            className="z-10 w-full max-w-[200px] rounded-t-[400px] rounded-b-[400px] saturate-150 transition duration-500"
+            className="z-10 w-full max-w-[200px] rounded-t-[400px] rounded-b-[400px] shadow-lg shadow-white/20 saturate-150 transition duration-500"
           />
         )}
       </div>
@@ -131,12 +123,10 @@ function Landing({ setSelectedPage }) {
             <HiEnvelope />
             Contactame
           </AnchorLink>
-          <button onClick={descargarPdf}>
+          <button onClick={handleDownloadPdf}>
             <AnchorLink
               className="flex items-center gap-2 rounded-r-md border-r border-t border-b py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner active:shadow-darkSecondary active:transition-none dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary dark:hover:dark:text-white"
-              onClick={() => setSelectedPage("contact")}
-              href="#contact"
-              download="../assets/imanoldominguezsanchez.pdf"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
             >

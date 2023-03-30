@@ -51,13 +51,8 @@ function AboutMe() {
             whileInView="visible"
             className="pt-2 leading-6"
           >
-            Soy de Buenos Aires, Argentina.{" "}
-            <span className="font-bold dark:text-darkSecondary">
-              Programador Full Stack{" "}
-            </span>
-            y tutor e-learning con un año de experiencia en la industria de la
-            educación. Me apasiona crear soluciones atractivas e innovadoras en
-            el desarrollo de
+            Soy de Buenos Aires, Argentina. Me apasiona crear soluciones
+            atractivas e innovadoras en el desarrollo de
             <span className="font-bold dark:text-darkSecondary">
               {" "}
               aplicaciones web

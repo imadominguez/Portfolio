@@ -22,15 +22,6 @@ function App() {
       if (window.scrollY === 0) setisTopOfPage(true);
       if (window.scrollY !== 0) setisTopOfPage(false);
     };
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,12 +44,12 @@ function App() {
       <LineGradient />
       <div className="mx-auto w-5/6 md:w-full">
         <AboutMe />
-        <LineGradient />
       </div>
+      <LineGradient />
       <div className="mx-auto w-5/6 md:w-full">
         <MySkills />
-        <LineGradient />
       </div>
+      <LineGradient />
     </div>
   );
 }
