@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 // ------------- Components --------------- //
 import NavBar from "./components/NavBar";
-import DotGroup from "./pages/DotGroup";
+import DotGroup from "./components/DotGroup";
 import Landing from "./pages/Landing";
 import AboutMe from "./pages/AboutMe";
 // -------------- Hooks ---------------- //
@@ -12,7 +12,7 @@ import LineGradient from "./components/LineGradient";
 import MySkills from "./pages/MySkills";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState("inicio");
 
   const [isTopOfPage, setisTopOfPage] = useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 920px)");

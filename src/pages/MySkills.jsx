@@ -12,7 +12,6 @@ import PostgreSQL from "../assets/logos/PostgreSQL";
 import Sql from "../assets/logos/Sql";
 
 const MySkills = () => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 920px)");
   const variantH2 = {
     hidden: { x: -50 },
     visible: {
@@ -22,7 +21,7 @@ const MySkills = () => {
   };
   return (
     <section
-      id="skills"
+      id="habilidades"
       className="pt-1mix-blend-saturation mx-auto flex min-h-[98vh] w-4/5 max-w-3xl flex-col items-center justify-center gap-10"
     >
       <div className=" flex w-full flex-col items-start ">

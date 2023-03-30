@@ -96,7 +96,11 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
             animate="visible"
             className="flex justify-between gap-16 font-robotoMono text-sm font-semibold"
           >
-            <div className={`${style.navItems} ${navbarText} `}>
+            <div
+              className={`${style.navItems} ${navbarText} ${
+                selectedPage === "inicio" && "text-darkSecondary"
+              } `}
+            >
               <Link
                 page="inicio"
                 selectedPage={selectedPage}
@@ -104,7 +108,11 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 component={<HiHome />}
               />
             </div>
-            <div className={`${style.navItems} ${navbarText} `}>
+            <div
+              className={`${style.navItems} ${navbarText} ${
+                selectedPage === "sobremi" && "text-darkSecondary"
+              }`}
+            >
               <Link
                 page="Sobre mi"
                 selectedPage={selectedPage}
@@ -112,7 +120,11 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 component={<HiIdentification />}
               />
             </div>
-            <div className={`${style.navItems} ${navbarText} `}>
+            <div
+              className={`${style.navItems} ${navbarText} ${
+                selectedPage === "habilidades" && "text-darkSecondary"
+              } `}
+            >
               <Link
                 page="Habilidades"
                 selectedPage={selectedPage}
@@ -120,7 +132,11 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 component={<HiCodeBracketSquare />}
               />
             </div>
-            <div className={`${style.navItems} ${navbarText} `}>
+            <div
+              className={`${style.navItems} ${navbarText} ${
+                selectedPage === "proyectos" && "text-darkSecondary"
+              }`}
+            >
               <Link
                 page="Proyectos"
                 selectedPage={selectedPage}
@@ -128,7 +144,11 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                 component={<HiBriefcase />}
               />
             </div>
-            <div className={`${style.navItems} ${navbarText} `}>
+            <div
+              className={`${style.navItems} ${navbarText} ${
+                selectedPage === "contacto" && "text-darkSecondary"
+              } `}
+            >
               <Link
                 page="Contacto"
                 selectedPage={selectedPage}

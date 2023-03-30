@@ -13,7 +13,7 @@ function Landing({ setSelectedPage }) {
   };
   return (
     <section
-      id="home"
+      id="inicio"
       className="flex min-h-[99vh] flex-col items-center justify-center gap-4 py-10 md:h-[99vh]   md:flex-row md:gap-16  "
     >
       {/* image section */}

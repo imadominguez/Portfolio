@@ -9,38 +9,38 @@ function DotGroup({ selectedPage, setSelectedPage }) {
     <div className="fixed top-[45%] right-7 flex flex-col gap-6">
       <AnchorLink
         className={`${
-          selectedPage === "home" ? selectedStyles : "dark:bg-white"
+          selectedPage === "inicio" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href="#home"
-        onClick={() => setSelectedPage("home")}
+        href="#inicio"
+        onClick={() => setSelectedPage("inicio")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "aboutme" ? selectedStyles : "dark:bg-white"
+          selectedPage === "sobremi" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#aboutme`}
-        onClick={() => setSelectedPage("aboutme")}
+        href={`#sobremi`}
+        onClick={() => setSelectedPage("sobremi")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "skills" ? selectedStyles : "dark:bg-white"
+          selectedPage === "habilidades" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#skills`}
-        onClick={() => setSelectedPage("skills")}
+        href={`#habilidades`}
+        onClick={() => setSelectedPage("habilidades")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "projects" ? selectedStyles : "dark:bg-white"
+          selectedPage === "proyectos" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#projects`}
-        onClick={() => setSelectedPage("projects")}
+        href={`#proyectos`}
+        onClick={() => setSelectedPage("proyectos")}
       />
       <AnchorLink
         className={`${
-          selectedPage === "contact" ? selectedStyles : "dark:bg-white"
+          selectedPage === "contacto" ? selectedStyles : "dark:bg-white"
         } h-4 w-4 rounded-full `}
-        href={`#contact`}
-        onClick={() => setSelectedPage("contact")}
+        href={`#contacto`}
+        onClick={() => setSelectedPage("contacto")}
       />
     </div>
   );

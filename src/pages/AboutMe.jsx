@@ -25,7 +25,7 @@ function AboutMe() {
   };
   return (
     <section
-      id="aboutme"
+      id="sobremi"
       className=" mx-auto flex min-h-[98vh] w-4/5 max-w-3xl flex-col items-start justify-center py-24 md:pt-48"
     >
       <motion.h2
