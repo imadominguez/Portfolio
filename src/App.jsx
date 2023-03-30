@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // ------------- Components --------------- //
-import NavBar from "./pages/NavBar";
+import NavBar from "./components/NavBar";
 import DotGroup from "./pages/DotGroup";
 import Landing from "./pages/Landing";
 import AboutMe from "./pages/AboutMe";

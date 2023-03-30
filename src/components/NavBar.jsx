@@ -12,7 +12,7 @@ import {
   HiEnvelope,
 } from "react-icons/hi2";
 import { AnimatePresence, motion } from "framer-motion";
-import style from "./style";
+import style from "../pages/style";
 
 const Link = ({ page, selectedPage, setSelectedPage, component }) => {
   const lowerCasePage = page.toLowerCase().split(" ").join("");
@@ -219,7 +219,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                   >
                     <HiIdentification />
                     <Link
-                      page="¿Quién soy?"
+                      page="Sobre mi"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
@@ -251,7 +251,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
                   >
                     <HiBriefcase />
                     <Link
-                      page="projects"
+                      page="Proyectos"
                       selectedPage={selectedPage}
                       setSelectedPage={setSelectedPage}
                     />
