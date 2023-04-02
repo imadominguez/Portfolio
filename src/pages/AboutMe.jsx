@@ -44,27 +44,18 @@ function AboutMe() {
         className="py-10"
       >
         <p className="flex flex-col font-robotoSerif">
-          Hola👋.
+          Hola👋
           <motion.span
             variants={variantSpanOne}
             initial="hidden"
             whileInView="visible"
-            className="pt-2 leading-6"
+            className="pt-2 leading-6 tracking-wider"
           >
-            Soy de Buenos Aires, Argentina. Me apasiona crear soluciones
-            atractivas e innovadoras en el desarrollo de
-            <span className="font-bold dark:text-darkSecondary">
-              {" "}
-              aplicaciones web
-            </span>
-            , utilizando mis habilidades en
-            <span className=" tracking-[1px] text-html"> HTML</span>,
-            <span className=" tracking-[1px] text-css"> CSS 3</span>,
-            <span className=" tracking-[1px] text-javascript"> JavaScript</span>
-            ,<span className=" tracking-[1px] text-react"> React</span>,
-            <span className=" tracking-[1px] text-redux"> redux</span>,
-            <span className=" tracking-[1px] text-white"> express </span>y
-            <span className=" tracking-[1px] text-postgre"> postgreSQL</span>
+            Soy de Buenos Aires, Argentina. Con conocimientos previos en Gestión
+            de Empresas con una base sólida en áreas como finanzas, marketing,
+            recursos humanos y estrategia empresarial. Busco nuevos desafíos y
+            oportunidades para crecer y mejorar mis habilidades. Me caracterizo
+            por ser proactivo y comprometido.
           </motion.span>
           <motion.span
             variants={variantSpanTwo}
@@ -80,16 +71,20 @@ function AboutMe() {
             variants={variantSpanOne}
             initial="hidden"
             whileInView="visible"
-            className="mx-auto mt-10 flex  items-center gap-2 pt-2 text-center font-roboto text-xl font-semibold uppercase leading-6 tracking-widest text-darkSecondary/80 md:w-4/5"
+            className="mx-auto mt-10  pt-2 text-center font-robotoSerif  leading-6 tracking-widest  md:w-4/5"
           >
-            <span>🧐</span>
-            Si te interesa un programador con ganas de progresar y afrontar
-            nuevos desafíos
-            <span>🧐</span>
+            Si te interesa un programador con{" "}
+            <span className="font-semibold uppercase text-darkSecondary underline underline-offset-[3px]">
+              ganas de progresar
+            </span>{" "}
+            y{" "}
+            <span className="font-semibold uppercase text-darkSecondary underline underline-offset-[3px]">
+              afrontar nuevos desafíos
+            </span>
           </motion.span>
           <a
             href="#contact"
-            className="mt-6 animate-bounce text-center text-lg font-bold uppercase tracking-widest text-darkSecondary "
+            className="mt-6 max-w-sm animate-bounce gap-2 self-center rounded-md bg-darkSecondary bg-gradient-to-r from-darkSecondary via-darkViteGradient to-darkSecondary py-3 px-7 text-center font-roboto font-semibold text-white/80  shadow-lg  shadow-gray-300/50 transition-all  duration-500 hover:via-darkSecondary hover:text-gray-700  "
           >
             <span className="">😀 ¡Contacta conmigo! 😀</span>
           </a>
