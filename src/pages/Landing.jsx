@@ -82,7 +82,6 @@ function Landing({ setSelectedPage }) {
           }}
         >
           <span className="z-10 flex flex-col  items-center justify-center gap-4 text-center font-robotoMono text-lg md:text-start">
-            Hola yo soy{" "}
             <span className="z-20 text-2xl  font-semibold dark:text-darkSecondary">
               <TypeAnimation
                 sequence={[
@@ -98,9 +97,9 @@ function Landing({ setSelectedPage }) {
             </span>
           </span>
 
-          <p className=" mx-auto w-4/5 p-3 pt-5 text-center font-robotoSerif md:w-full  ">
-            Soy programador Full Stack y tutor e-learning con un año de
-            experiencia en la industria de la educación.
+          <p className=" mx-auto w-4/5 p-3 pt-5 text-left font-robotoSerif md:w-full  ">
+            Programador y tutor e-learning con un año de experiencia en la
+            industria de la educación.
           </p>
         </motion.div>
         {/* CAAL TO ACTIONS */}
@@ -116,7 +115,7 @@ function Landing({ setSelectedPage }) {
           }}
         >
           <AnchorLink
-            className="flex items-center gap-2 rounded-l-md bg-gradient-to-r py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner  active:shadow-black  active:transition-none dark:bg-darkSecondary  dark:from-darkSecondary dark:via-darkViteGradient dark:to-darkSecondary dark:text-white dark:hover:via-darkSecondary dark:hover:text-gray-700"
+            className="flex items-center gap-2 rounded-l-md bg-darkSecondary bg-gradient-to-r from-darkSecondary via-darkViteGradient to-darkSecondary py-3 px-7 font-roboto  font-semibold  text-white transition  duration-500 hover:via-darkSecondary hover:text-gray-700 active:shadow-inner active:shadow-black active:transition-none"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
