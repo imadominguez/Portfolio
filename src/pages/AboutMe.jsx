@@ -84,7 +84,7 @@ function AboutMe() {
           </motion.span>
           <a
             href="#contact"
-            className="mt-6 flex h-12  max-w-sm animate-bounce items-center justify-center gap-2 gap-2  self-center rounded-full bg-gradient-to-r from-[#AC945F] to-[#AC645F] py-4 px-10  font-roboto  font-semibold text-white  transition duration-500 "
+            className="mt-6 flex h-12  max-w-sm animate-bounce items-center justify-center gap-2 self-center rounded-full bg-gradient-to-r from-[#AC945F] to-[#AC645F] py-4 px-10  font-roboto  font-semibold text-white  transition duration-500 "
           >
             <span className=""> ¡Contacta conmigo! </span>
           </a>
