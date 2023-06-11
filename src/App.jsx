@@ -25,8 +25,8 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className=" flex h-screen flex-col items-center justify-center bg-[#E6E6E6]  text-black dark:bg-zinc-800 dark:text-slate-200">
-      <div className="relative h-screen w-full snap-y  snap-mandatory overflow-auto ">
+    <div className=" ">
+      <div className="relative h-screen w-full snap-y snap-mandatory  overflow-auto scroll-smooth bg-[#E6E6E6]  text-black dark:bg-zinc-800 dark:text-slate-200 ">
         <NavBar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
