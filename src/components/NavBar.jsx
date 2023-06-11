@@ -76,18 +76,9 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
     : "dark:hover:text-darkSecondary";
   return (
     <nav
-      className={` ${navbarBackground} : fixed top-0 z-40 w-full bg-[#E6E6E6] bg-gradient-to-b py-2  transition duration-300 ease-in dark:from-zinc-700 dark:to-zinc-800 md:py-4`}
+      className={` ${navbarBackground} sticky top-0 z-40 w-full bg-zinc-800  py-2  transition duration-300 ease-in  md:py-10`}
     >
-      <div className="mx-auto flex w-5/6 items-center justify-between">
-        <motion.h4
-          variants={variantNav}
-          initial="hidden"
-          animate="visible"
-          className={`cursor-pointer font-roboto ${navbarText} text-3xl font-bold transition duration-500`}
-        >
-          ID
-        </motion.h4>
-
+      <div className="mx-auto flex w-5/6 items-center justify-center">
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
           <motion.div

@@ -84,9 +84,9 @@ function AboutMe() {
           </motion.span>
           <a
             href="#contact"
-            className="mt-6 max-w-sm animate-bounce gap-2 self-center rounded-md bg-darkSecondary bg-gradient-to-r from-darkSecondary via-darkViteGradient to-darkSecondary py-3 px-7 text-center font-roboto font-semibold text-white/80  shadow-lg  shadow-gray-300/50 transition-all  duration-500 hover:via-darkSecondary hover:text-gray-700  "
+            className="mt-6 flex h-12  max-w-sm animate-bounce items-center justify-center gap-2 gap-2  self-center rounded-full bg-gradient-to-r from-[#AC945F] to-[#AC645F] py-4 px-10  font-roboto  font-semibold text-white  transition duration-500 "
           >
-            <span className="">😀 ¡Contacta conmigo! 😀</span>
+            <span className=""> ¡Contacta conmigo! </span>
           </a>
         </p>
       </motion.div>

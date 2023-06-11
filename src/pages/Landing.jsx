@@ -16,7 +16,7 @@ function Landing({ setSelectedPage }) {
       id="inicio"
       className="flex min-h-[99vh] flex-col items-center justify-center gap-4 py-10 md:h-[99vh]   md:flex-row md:gap-16  "
     >
-      {/* image section */}
+      {/* image section
       <div className="z-10  mt-16  flex flex-col items-center justify-center md:order-2 md:mt-0 md:flex-row-reverse">
         {isAboveMediumScreens ? (
           <motion.div
@@ -55,7 +55,7 @@ function Landing({ setSelectedPage }) {
             className="z-10 w-full max-w-[200px] rounded-t-[400px] rounded-b-[400px] shadow-lg shadow-white/20 saturate-150 transition duration-500"
           />
         )}
-      </div>
+      </div> */}
       {/* MAIN SECTION */}
       <motion.div
         initial="hidden"
@@ -66,10 +66,10 @@ function Landing({ setSelectedPage }) {
           type: "spring",
         }}
         variants={{
-          hidden: { opacity: 0, x: -150 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, y: 150 },
+          visible: { opacity: 1, y: 0 },
         }}
-        className="z-30 flex  min-w-[317px] max-w-[400px] flex-col items-center justify-center  gap-4 "
+        className="z-30 flex  min-w-[317px] max-w-[800px] flex-col items-center justify-center  gap-4 "
       >
         <motion.div
           initial="hidden"
@@ -77,18 +77,18 @@ function Landing({ setSelectedPage }) {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1, type: "spring" }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
           }}
         >
           <span className="z-10 flex flex-col  items-center justify-center gap-4 text-center font-robotoMono text-lg md:text-start">
-            <span className="z-20 text-2xl  font-semibold dark:text-darkSecondary">
+            <span className="z-20 text-3xl font-semibold  dark:text-darkSecondary md:text-5xl">
               <TypeAnimation
                 sequence={[
                   "Imanol Dominguez",
-                  1000,
+                  1500,
                   "Full Stack Developer",
-                  2000,
+                  1500,
                 ]}
                 wrapper="div"
                 cursor={true}
@@ -97,14 +97,14 @@ function Landing({ setSelectedPage }) {
             </span>
           </span>
 
-          <p className=" mx-auto w-4/5 p-3 pt-5 text-left font-robotoSerif md:w-full  ">
+          <p className=" mx-auto  p-3 pt-5 text-left font-robotoSerif md:w-full  ">
             Programador y tutor e-learning con un año de experiencia en la
             industria de la educación.
           </p>
         </motion.div>
         {/* CAAL TO ACTIONS */}
         <motion.div
-          className="mt-5 flex justify-center md:justify-start"
+          className="mt-5 flex flex-col justify-center gap-2 sm:flex-row md:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -115,21 +115,20 @@ function Landing({ setSelectedPage }) {
           }}
         >
           <AnchorLink
-            className="flex items-center gap-2 rounded-l-md bg-darkSecondary bg-gradient-to-r from-darkSecondary via-darkViteGradient to-darkSecondary py-3 px-7 font-roboto  font-semibold  text-white transition  duration-500 hover:via-darkSecondary hover:text-gray-700 active:shadow-inner active:shadow-black active:transition-none"
+            className="flex h-12 items-center justify-center  gap-2 rounded-full bg-gradient-to-r from-[#AC945F] to-[#AC645F] py-4 px-10  font-roboto  font-semibold text-white  transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            <HiEnvelope />
             Contactame
           </AnchorLink>
 
           <a
-            className="flex items-center gap-2 rounded-r-md border-r border-t border-b py-3 px-7 font-roboto font-semibold transition duration-500 active:shadow-inner active:shadow-darkSecondary active:transition-none dark:border-darkSecondary dark:text-darkSecondary dark:shadow-darkSecondary dark:hover:dark:text-white"
+            className="flex h-12  items-center justify-center rounded-full border-[3px] border-[#AC945F] py-4 px-10"
             href="https://drive.google.com/file/d/1vlr9weZneQZlGJ8zbSPGhfOTYf8IxgrJ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <HiDocumentArrowDown /> Descarga CV
+            Descargar CV
           </a>
         </motion.div>
         <motion.div
