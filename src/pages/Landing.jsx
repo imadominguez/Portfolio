@@ -84,12 +84,7 @@ function Landing({ setSelectedPage }) {
           <span className="z-10 flex flex-col  items-center justify-center gap-4 text-center font-robotoMono text-lg md:text-start">
             <span className="z-20 text-3xl font-semibold  dark:text-darkSecondary md:text-5xl">
               <TypeAnimation
-                sequence={[
-                  "Imanol Dominguez",
-                  1500,
-                  "Full Stack Developer",
-                  1500,
-                ]}
+                sequence={["Imanol Dominguez", 1500, "Full Stack Developer", 1500]}
                 wrapper="div"
                 cursor={true}
                 repeat={Infinity}
@@ -98,8 +93,8 @@ function Landing({ setSelectedPage }) {
           </span>
 
           <p className=" mx-auto  p-3 pt-5 text-left font-robotoSerif md:w-full  ">
-            Programador y tutor e-learning con un año de experiencia en la
-            industria de la educación.
+            Programador y tutor e-learning con un año de experiencia en la industria de la
+            educación.
           </p>
         </motion.div>
         {/* CAAL TO ACTIONS */}
@@ -108,7 +103,11 @@ function Landing({ setSelectedPage }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 1, type: "spring" }}
+          transition={{
+            delay: 0.2,
+            duration: 1,
+            type: "spring",
+          }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
@@ -136,7 +135,11 @@ function Landing({ setSelectedPage }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 1, type: "spring" }}
+          transition={{
+            delay: 0.4,
+            duration: 1,
+            type: "spring",
+          }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
