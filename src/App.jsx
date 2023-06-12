@@ -41,6 +41,17 @@ function App() {
         <div className="mx-auto grid min-h-screen w-5/6 snap-center place-content-center md:w-full">
           <MySkills />
         </div>
+        <div className="mx-auto grid min-h-screen  w-5/6  snap-center place-content-center ">
+          <ul className="flex snap-x snap-mandatory gap-2 overflow-x-auto">
+            <li className="h-96 w-96 shrink-0 snap-center bg-red-300"></li>
+            <li className="h-96 w-96 shrink-0 snap-center bg-gray-500"></li>
+
+            <li className="h-96 w-96 shrink-0 snap-center bg-blue-400"></li>
+            <li className="h-96 w-96 shrink-0 snap-center bg-yellow-400"></li>
+            <li className="h-96 w-96 shrink-0 snap-center bg-orange-500"></li>
+            <li className="h-96 w-96 shrink-0 snap-center bg-black"></li>
+          </ul>
+        </div>
       </div>
       <a
         href="#inicio"
