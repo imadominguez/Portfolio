@@ -14,7 +14,7 @@ const MySkills = () => {
   return (
     <section
       id="habilidades"
-      className="mx-auto flex min-h-[98vh] w-4/5 max-w-3xl flex-col items-center justify-center gap-10"
+      className="mx-auto flex max-w-3xl flex-col items-start justify-center gap-5  py-20"
     >
       <div className=" flex w-full flex-col items-start ">
         <motion.h2

@@ -68,9 +68,7 @@ const variantNav = {
 function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 1100px)");
-  const navbarBackground = isTopOfPage
-    ? " "
-    : "dark:from-zinc-700 dark:to-zinc-800  ";
+  const navbarBackground = isTopOfPage ? " " : "dark:from-zinc-700 dark:to-zinc-800  ";
   const navbarText = isTopOfPage
     ? "dark:hover:text-darkSecondary"
     : "dark:hover:text-darkSecondary";
@@ -78,7 +76,11 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
     <nav
       className={` ${navbarBackground} sticky top-0 z-40 w-full bg-zinc-800  py-2  transition duration-300 ease-in  md:py-10`}
     >
-      <div className="mx-auto flex w-5/6 items-center justify-center">
+      <div
+        className={`mx-auto flex w-5/6 items-center ${
+          isAboveSmallScreens ? "justify-center" : "justify-end"
+        }  `}
+      >
         {/* DESKTOP NAV */}
         {isAboveSmallScreens ? (
           <motion.div
@@ -150,7 +152,7 @@ function NavBar({ isTopOfPage, selectedPage, setSelectedPage }) {
           </motion.div>
         ) : (
           <button
-            className="rounded-full p-3 dark:bg-gray-700/80"
+            className="self-end rounded-full p-3 dark:bg-gray-700/80"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             {isMenuToggled ? <HiBars3BottomRight /> : <HiBars3 />}

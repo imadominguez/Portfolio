@@ -26,13 +26,13 @@ function AboutMe() {
   return (
     <section
       id="sobremi"
-      className=" mx-auto flex min-h-[98vh] w-4/5 max-w-3xl flex-col items-start justify-center py-24 md:pt-48"
+      className="mx-auto flex max-w-3xl flex-col items-start justify-center gap-5  py-20"
     >
       <motion.h2
         variants={variantH2}
         initial="hidden"
         whileInView="visible"
-        className="font-robotoMono text-2xl font-bold uppercase tracking-[1px]  "
+        className="mt-20 font-robotoMono text-2xl font-bold uppercase tracking-[1px]  "
       >
         sobre mi
       </motion.h2>
@@ -41,54 +41,53 @@ function AboutMe() {
         initial="hidden"
         whileInView="visible"
         variants={variants}
-        className="py-10"
+        className="py-5"
       >
-        <p className="flex flex-col font-robotoSerif">
-          Hola👋
+        <div className="flex flex-col gap-5 font-robotoSerif">
+          <span>Hola👋</span>
           <motion.span
             variants={variantSpanOne}
             initial="hidden"
             whileInView="visible"
-            className="pt-2 leading-6 tracking-wider"
+            className="tracking-wider"
           >
-            Soy de Buenos Aires, Argentina. Con conocimientos previos en Gestión
-            de Empresas con una base sólida en áreas como finanzas, marketing,
-            recursos humanos y estrategia empresarial. Busco nuevos desafíos y
-            oportunidades para crecer y mejorar mis habilidades. Me caracterizo
-            por ser proactivo y comprometido.
+            Soy de Buenos Aires, Argentina. Con conocimientos previos en Gestión de
+            Empresas con una base sólida en áreas como finanzas, marketing, recursos
+            humanos y estrategia empresarial.
+            <br /> Busco nuevos desafíos y oportunidades para crecer y mejorar mis
+            habilidades. Me caracterizo por ser proactivo y comprometido.
           </motion.span>
           <motion.span
             variants={variantSpanTwo}
             initial="hidden"
             whileInView="visible"
-            className="pt-10 text-center leading-6"
+            className="text-center "
           >
-            ¡Me encanta trabajar en equipo y siempre estoy buscando aprender
-            nuevas habilidades y conocimientos para poder estar continuamente
-            actualizado! 💪
+            ¡Me encanta trabajar en equipo y siempre estoy buscando aprender nuevas
+            habilidades y conocimientos para poder estar continuamente actualizado! 💪
           </motion.span>
           <motion.span
             variants={variantSpanOne}
             initial="hidden"
             whileInView="visible"
-            className="mx-auto mt-10  pt-2 text-center font-robotoSerif  leading-6 tracking-widest  md:w-4/5"
+            className="mx-auto    text-center   tracking-widest  md:w-4/5"
           >
             Si te interesa un programador con{" "}
-            <span className="font-semibold uppercase text-darkSecondary underline underline-offset-[3px]">
+            <span className="font-semibold uppercase text-darkSecondary">
               ganas de progresar
             </span>{" "}
             y{" "}
-            <span className="font-semibold uppercase text-darkSecondary underline underline-offset-[3px]">
+            <span className="font-semibold uppercase text-darkSecondary ">
               afrontar nuevos desafíos
             </span>
           </motion.span>
           <a
             href="#contact"
-            className="mt-6 flex h-12  max-w-sm animate-bounce items-center justify-center gap-2 self-center rounded-full bg-gradient-to-r from-[#AC945F] to-[#AC645F] py-4 px-10  font-roboto  font-semibold text-white  transition duration-500 "
+            className=" flex h-12  max-w-sm animate-bounce items-center justify-center gap-2 self-center rounded-full bg-gradient-to-r from-[#AC945F] to-[#AC645F] py-4 px-10  font-roboto  font-semibold text-white  transition duration-500 "
           >
             <span className=""> ¡Contacta conmigo! </span>
           </a>
-        </p>
+        </div>
       </motion.div>
     </section>
   );

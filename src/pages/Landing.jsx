@@ -14,48 +14,8 @@ function Landing({ setSelectedPage }) {
   return (
     <section
       id="inicio"
-      className="flex min-h-[99vh] flex-col items-center justify-center gap-4 py-10 md:h-[99vh]   md:flex-row md:gap-16  "
+      className="mx-auto flex max-w-3xl flex-col items-start justify-center gap-5  py-20"
     >
-      {/* image section
-      <div className="z-10  mt-16  flex flex-col items-center justify-center md:order-2 md:mt-0 md:flex-row-reverse">
-        {isAboveMediumScreens ? (
-          <motion.div
-            viewport={{ once: true, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 1.5 }}
-            variants={{
-              hidden: {
-                opacity: 0,
-              },
-              visible: { opacity: 1 },
-            }}
-            className="relative z-0  before:absolute before:-top-4 before:-left-4 before:z-[-1] before:h-full before:w-full before:max-w-[400px] before:rounded-t-[400px] before:rounded-b-[400px] before:border-2 before:border-darkSecondary"
-          >
-            <img
-              src={profile}
-              alt="profile"
-              className="z-10 w-full max-w-[350px] rounded-t-[400px] rounded-b-[400px] saturate-150 transition duration-500 "
-            />
-          </motion.div>
-        ) : (
-          <motion.img
-            animate="visible"
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 1.7 }}
-            variants={{
-              hidden: {
-                opacity: 0,
-              },
-              visible: { opacity: 1 },
-            }}
-            src={profile}
-            alt="profile"
-            className="z-10 w-full max-w-[200px] rounded-t-[400px] rounded-b-[400px] shadow-lg shadow-white/20 saturate-150 transition duration-500"
-          />
-        )}
-      </div> */}
       {/* MAIN SECTION */}
       <motion.div
         initial="hidden"
@@ -92,14 +52,14 @@ function Landing({ setSelectedPage }) {
             </span>
           </span>
 
-          <p className=" mx-auto  p-3 pt-5 text-left font-robotoSerif md:w-full  ">
+          <p className=" mx-auto  max-w-md pt-5 text-center font-robotoSerif  ">
             Programador y tutor e-learning con un año de experiencia en la industria de la
             educación.
           </p>
         </motion.div>
         {/* CAAL TO ACTIONS */}
         <motion.div
-          className="mt-5 flex flex-col justify-center gap-2 sm:flex-row md:justify-start"
+          className="mt-5 flex flex-col justify-center gap-2 xs:flex-row  md:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

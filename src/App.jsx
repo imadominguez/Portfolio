@@ -32,31 +32,24 @@ function App() {
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
-        <div className="mx-auto w-5/6 snap-center md:w-full">
+        <div className="mx-auto grid min-h-screen w-5/6 snap-center place-content-center md:w-full">
           <Landing />
-
-          <LineGradient />
         </div>
-        <div className="mx-auto w-5/6 snap-center md:w-full">
+        <div className="mx-auto grid min-h-screen w-5/6 snap-center place-content-center md:w-full">
           <AboutMe />
-          <LineGradient />
         </div>
-        <div className="mx-auto w-5/6 snap-center md:w-full">
+        <div className="mx-auto grid min-h-screen w-5/6 snap-center place-content-center md:w-full">
           <MySkills />
-          <LineGradient />
         </div>
       </div>
-
       <a
         href="#inicio"
-        className="absolute right-10 bottom-10 animate-bounce rounded-full border-2 border-[#AC945F] px-4 py-2"
+        className="right-10 bottom-10 hidden animate-bounce rounded-full border-2 border-[#AC945F] px-4 py-2 lg:absolute"
       >
         ⬆
       </a>
-      <div className="absolute right-0 left-0 bottom-0 z-50 pb-2  pt-3 text-center  text-xs font-bold tracking-widest sm:top-0 sm:bottom-auto">
-        <span className="rounded-full bg-[#AC945F] px-4 py-2">
-          🚧 Este portfolio se encuentra en desarrollo 🚧
-        </span>
+      <div className="absolute  left-5 top-2 z-50 pb-2  pt-3 text-center  text-xs font-bold tracking-widest sm:top-0 sm:bottom-auto">
+        <span className="rounded-full bg-[#AC945F] px-4 py-2">🚧 En desarrollo 🚧</span>
       </div>
     </div>
   );

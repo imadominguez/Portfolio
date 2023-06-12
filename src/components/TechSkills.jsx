@@ -10,11 +10,11 @@ import React from "../assets/logos/React";
 
 export const TechSkills = () => {
   return (
-    <article className="grid w-full  grid-cols-2 gap-10 font-roboto font-medium tracking-widest md:grid-cols-3">
+    <article className="grid w-full grid-cols-2  gap-x-5 gap-y-2 md:grid-cols-3">
       {tecnology.map((tec) => (
         <div
           key={tec.name}
-          className="flex flex-col items-center justify-center gap-2 rounded-lg bg-black/80 p-4 dark:bg-black/50"
+          className="flex items-center justify-center  rounded-lg bg-black/80 p-4 dark:bg-black/50"
         >
           {tec.svg}
           {tec.tecnology}
